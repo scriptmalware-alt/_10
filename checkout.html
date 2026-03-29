@@ -82,8 +82,8 @@ const packageName = urlParams.get('package') || "Unknown";
 const price = parseInt(urlParams.get('price')) || 0;
 
 // 🔥 GENERATE KEY 24 KARAKTER
-function generateKey(length = 24) {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+function generateKey(length = 8) {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let result = "";
   for (let i = 0; i < length; i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -123,7 +123,7 @@ content.innerHTML = `
     IDR ${order.amount.toLocaleString("id-ID")}
   </div>
 
-  <div class="fw-semibold text-white text-center mb-1">Key Akses Script Malware</div>
+  <div class="fw-semibold text-white text-center mb-1">Kode Script Malware</div>
 
   <!-- 🔥 KEY + BUTTON KANAN -->
   <div class="d-flex align-items-center justify-content-between bg-black bg-opacity-50 rounded-3 px-2 py-2">
